@@ -5,19 +5,21 @@
 
 **Basic**
 
-1. What’s the difference between `ssh user@ip` and `ssh -i key.pem user@ip`?
+1. What’s the difference between `ssh user@ip` and `ssh -i key.pem user@ip`?<br>
 = 'ssh user@ip' uses password for that user and 'ssh -i key.pem user@ip' uses the private key configured in the ssh/config file.
-2. How can you copy a file from your local machine to a remote server using SSH?
+2. How can you copy a file from your local machine to a remote server using SSH?<br>
 = We can use **scp** to copy "scp path_of_file_ToCopy remote_user@ip destination_path"
-3. What port does SSH use by default? How would you connect if it’s running on a different port?
+3. What port does SSH use by default? How would you connect if it’s running on a different port?<br>
 = ssh uses 22 by default if we want to connect on different port use "ssh -p user@ip"
-4. How do you keep an SSH session alive if it keeps timing out?
+4. How do you keep an SSH session alive if it keeps timing out?<br>
 = we can use "ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=5 master@192.168.0.163"
 
 
 **Intermediate**
 
-5. You want to log in without entering a password each time. How would you set up SSH key-based authentication?
+5. You want to log in without entering a password each time. How would you set up SSH key-based authentication?<br>
+= Generate private and public key using this "ssh-keygen -t rsa -b 4096"<br>
+  ssh in your Remote machine once with pass and paste the public generated in the /.ssh/authorized_keys exit <br>
 6. What is an SSH tunnel and when might you use one in production?
 7. You’re connected over SSH and your network dies — how can you prevent losing long-running commands?
 
