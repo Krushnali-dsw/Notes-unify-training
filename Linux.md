@@ -20,13 +20,14 @@
 5. You want to log in without entering a password each time. How would you set up SSH key-based authentication?<br>
 = Generate private and public key using this "ssh-keygen -t rsa -b 4096"<br>
   ssh in your Remote machine once with pass and paste the public generated in the /.ssh/authorized_keys exit <br>
-6. What is an SSH tunnel and when might you use one in production?
+6. What is an SSH tunnel and when might you use one in production?<br>
 7. You’re connected over SSH and your network dies — how can you prevent losing long-running commands?
 
 **Advanced**
 
 8. How would you securely restrict SSH access to specific users or IP addresses?
 9. What’s the difference between a VPN and SSH tunneling for remote access?
+= 
 10. Your SSH connection is slow or laggy — what steps would you take to debug latency issues?
 
 ---
